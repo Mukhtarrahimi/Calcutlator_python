@@ -20,6 +20,16 @@ def clear():
     global equation
     equation = ""
     label_result.config(text=equation)
+    
+def calculate():
+    global equation
+    try:
+        result = eval(equation)
+        label_result.config(text=result)
+        equation = str(result)
+    except Exception as e:
+        label_result.config(text="Error")
+        equation = ""
 
 
 label_result = Label(root, width=25, height=2, text="", font=("arial", 30))
@@ -225,7 +235,7 @@ Button(
     bd=1,
     fg="#fff",
     bg="#fe9037",
-    command=lambda: show("="),
+    command=lambda: calculate(),
 ).place(x=430, y=400)
 
 root.mainloop()
