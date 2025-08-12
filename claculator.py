@@ -1,7 +1,7 @@
 import tkinter as tk
 
 root = tk.Tk()
-root.title("ماشین حساب")
+root.title("Calculator")
 root.geometry("320x420")
 root.config(bg="white")
 root.resizable(False, False)
@@ -22,7 +22,7 @@ def equal_press():
         equation.set(result)
         expression = result
     except:
-        equation.set("خطا")
+        equation.set("Error")
         expression = ""
 
 
