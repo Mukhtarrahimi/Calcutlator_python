@@ -9,6 +9,13 @@ root.configure(bg="#17161b")
 
 equation = ""
 
+def show(value):
+    global equation
+    equation += str(value)
+    label_result.config(text=equation)
+    
+
+
 label_result = Label(root, width=25, height=2, text="", font=("arial", 30))
 label_result.pack()
 
